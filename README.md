@@ -24,7 +24,7 @@ LevelForge convierte tus metas en un sistema visual tipo timeline, donde cada ta
 
 ## 🚀 Demo
 
-(agrega aquí tu link cuando lo subamos)
+(Link en desarrollo)
 
 ## 📦 Instalación
 
@@ -33,9 +33,10 @@ LevelForge convierte tus metas en un sistema visual tipo timeline, donde cada ta
 
 2. Abre index.html en tu navegador
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
 Fernando Aquino
+Gigdem Zúñiga
 
 ---
 
