@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Upflow</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="pug.png" class="logo">
+    <h1>Upflow</h1>
+  </div>
+
+  <p id="welcome"></p>
+
+  <div class="menu">
+    <select id="boardSelect" onchange="changeBoard()"></select>
+    <button onclick="openBoardModal()">+ Nueva meta</button>
+  </div>
+
+  <button class="toggle-btn" onclick="toggleComposer()">+ Nueva tarea</button>
+</header>
+
+<!-- LOGIN -->
+<div id="login" class="login">
+  <img src="pug.png" class="login-logo">
+  <h2>Iniciar sesión</h2>
+  <input id="usernameInput" placeholder="Tu nombre">
+  <input id="userPhotoInput" placeholder="URL de tu foto de perfil">
+  <button onclick="login()">Entrar</button>
+</div>
+
+<!-- FORM -->
+<div id="composer" class="composer hidden">
+  <input id="text" placeholder="Título">
+  <input id="subtitle" placeholder="Subtítulo">
+  <input id="schedule" placeholder="Horario">
+  <input id="daysInput" placeholder="¿En cuántos días?">
+  <input id="bgInput" placeholder="Imagen fondo">
+  <input id="resourcesInput" placeholder="Recursos (links o texto, separados por coma)">
+  <button onclick="addTask()">Publicar tarea</button>
+</div>
+
+<main id="feed"></main>
+
+<!-- MODAL DETALLE -->
+<div id="detailModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeDetail()">&times;</span>
+
+    <h2 id="d-title"></h2>
+    <p id="d-subtitle"></p>
+    <p id="d-schedule"></p>
+    <p id="d-days"></p>
+
+    <h3>Recursos</h3>
+    <ul id="d-resources"></ul>
+  </div>
+</div>
+
+<!-- MODAL META -->
+<div id="boardModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeBoardModal()">&times;</span>
+    <h2>Nueva meta</h2>
+    <input id="boardNameInput">
+    <button onclick="createBoard()">Crear</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
